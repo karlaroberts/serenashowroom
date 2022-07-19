@@ -132,5 +132,8 @@ p{
         background-color: white;
     } 
 
+     .gradientes{
+        background-image:linear-gradient(blue, red)
+     }
 }
 /* fin vista mobile index */
