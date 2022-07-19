@@ -71,6 +71,7 @@ main .portadaText p {
     padding-top: 40px;
     padding-bottom: 300px;
     height: 0%;
+    background-image: linear-gradient( rgb(233, 68, 233) , white);
 }
 /* fin de portada */
 /* inicio footer */
@@ -105,10 +106,6 @@ footer {
     "titulo  titulo"
     "texto   imagen";
     justify-items: left;
-    
-
- 
-
 }
 h2{
     grid-area: titulo;
@@ -116,6 +113,10 @@ h2{
 }
 p{
     grid-area: texto;
+}
+.gradientes{
+    background-image: linear-gradient(rgb(233, 68, 233) , white);
+
 }
 .imagnosotros{
     grid-area: imagen;
@@ -133,38 +134,3 @@ p{
 
 }
 /* fin vista mobile index */
-
-
-/* inicio vista desktop index */
-@media only screen and (max-width: 1024px) {
-    body{
-        background-color: white;
-    } 
-}
-
-/* inicio vista mobile nosotros */
-@media only screen and ( max-width: 320px) {
-    .gridPadre{
-        display: grid;
-        grid-template-areas: 
-        "titulo"
-        "texto"
-        "imagen";
-        grid-template-rows: 150px 200px auto;
-        grid-template-columns: 100%;
-     }
-}
-    /* fin vista mobile nosotros */
-    /* inicio vista desktop nosotros */
-    @media only screen and ( max-width: 1024px){
-        .gridPadre{
-            display: grid;
-            grid-template-areas: 
-            "titulo"
-            "texto"
-            "imagen";
-            grid-template-rows: 150px 200px auto;
-            grid-template-columns: 100%;
-        }
- }
- /* fin vista desktop nosotros */
