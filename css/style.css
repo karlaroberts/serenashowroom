@@ -10,37 +10,33 @@ body {
 header {
   background-color: #ffdfe4;
   background-image: linear-gradient(#c594c5, white); }
-
-h1 {
-  font-family: 'Times New Roman', Times, serif;
-  color: #696868;
-  text-align: center; }
-
-.logo__flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start; }
-
-header img {
-  width: 100px;
-  height: 70px;
-  margin: 0 20px 0 20px; }
-
-.carrito {
-  font-size: 200%; }
-
-header nav ul li {
-  display: inline; }
+  header .logo__flex {
+    font-size: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start; }
+  header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #696868;
+    text-align: center; }
+  header img {
+    width: 100px;
+    height: 70px;
+    margin: 0 20px 0 20px; }
+  header .carrito {
+    font-size: 200%; }
 
 /* fin header */
 /* inicio portada */
-.carousel-inner {
+main .carousel-inner {
   height: 400px; }
 
-.contener__flex {
+main .contenedor__flex {
+  height: 200px;
+  width: 70px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -48,7 +44,7 @@ header nav ul li {
   justify-content: center;
   align-items: center; }
 
-.titulo_portada {
+main .titulo_portada {
   color: grey;
   font-size: 30px;
   text-align: center;
@@ -76,11 +72,14 @@ main .portadaText p {
   background-color: white;
   background-image: linear-gradient(white, grey);
   font-size: medium;
-  padding-top: 30px;
-  padding-bottom: 150px;
-  height: 0%; }
+  height: 500px; }
 
 /* fin de portada */
+/* inicio productos */
+.prendas {
+  display: flex; }
+
+/* fin productos */
 /* inicio footer */
 footer {
   color: #0f0f0f;
@@ -91,44 +90,34 @@ footer {
   bottom: 0;
   width: 100%;
   height: 0.5s; }
-
-.bi-whatsapp:before {
-  font-size: 200%; }
-
-.bi-envelope:before {
-  font-size: 200%; }
-
-.bi-geo-alt:before {
-  font-size: 200%; }
-
-.fa-cc-visa:before {
-  font-size: 200%;
-  color: black; }
-
-.fa-cc-mastercard::before {
-  font-size: 200%;
-  color: black; }
-
-.fa-cc-amex:before {
-  font-size: 200%;
-  color: black; }
-
-.fa-cc-paypal:before {
-  font-size: 200%;
-  color: black; }
-
-.footer__flex {
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.8rem; }
-
-.redes {
-  font-size: 200%;
-  align-items: center; }
-
-.footer__creditos {
-  font-size: 0.8rem;
-  text-align: center; }
+  footer .bi-whatsapp:before {
+    font-size: 200%; }
+  footer .bi-envelope:before {
+    font-size: 200%; }
+  footer .bi-geo-alt:before {
+    font-size: 200%; }
+  footer .fa-cc-visa:before {
+    font-size: 200%;
+    color: black; }
+  footer .fa-cc-mastercard::before {
+    font-size: 200%;
+    color: black; }
+  footer .fa-cc-amex:before {
+    font-size: 200%;
+    color: black; }
+  footer .fa-cc-paypal:before {
+    font-size: 200%;
+    color: black; }
+  footer .footer__flex {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem; }
+  footer .redes {
+    font-size: 200%;
+    align-items: center; }
+  footer .footer__creditos {
+    font-size: 0.8rem;
+    text-align: center; }
 
 /* fin footer */
 /* inicio main nosotros */
@@ -189,6 +178,12 @@ footer {
   margin: 0 0 0 20px;
   padding: 20px; }
 
+/* main contacto */
+.main_contacto {
+  height: 100%;
+  width: 300px; }
+
+/* fin main contacto */
 /* inicio vista mobile index-nosotros*/
 @media only screen and (max-width: 350px) {
   body {

@@ -1,4 +1,4 @@
-*{  
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -13,96 +13,102 @@ body {
 header {
     background-color: rgb(255, 223, 228);
     background-image: linear-gradient(rgb(197, 148, 197), white);
-}
-h1 {
-    font-family:'Times New Roman', Times, serif;
-    color: rgb(105, 104, 104);
-    text-align: center;
-}
 
-.logo__flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content:flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-header img {
-    width: 100px;
-    height: 70px;
-    margin: 0 20px 0 20px;
-}
+    .logo__flex {
+        font-size: 70px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 
-.carrito {
-    font-size: 200%;
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(105, 104, 104);
+        text-align: center;
+    }
+
+    img {
+        width: 100px;
+        height: 70px;
+        margin: 0 20px 0 20px;
+    }
+
+    .carrito {
+        font-size: 200%;
+    }
 }
-
-
-header nav ul li {
-    display: inline;
-}
-
 /* fin header */
 /* inicio portada */
-.carousel-inner {
-    height: 400px;
-}
-
-.contener__flex {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.titulo_portada {
-    color: grey;
-    font-size: 30px;
-    text-align: center;
-    /* nombre */
-    animation-name: efecto;
-    /* veces que se ejecuta */
-    animation-iteration-count: infinite;
-    /* duracion */
-    animation-duration: 4s;
-    /* tiempo que demora hasta que carga */
-    animation-delay: 1s;
-}
-
-@keyframes efecto {
-    0% {
-        color: rgb(150, 32, 150);
+main {
+    
+    .carousel-inner {
+        height: 400px;
     }
 
-    50% {
-        color: rgb(197, 148, 197);
+    .contenedor__flex {
+        height: 200px;
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
     }
 
-    75% {
-        color: black;
+    .titulo_portada {
+        color: grey;
+        font-size: 30px;
+        text-align: center;
+        /* nombre */
+        animation-name: efecto;
+        /* veces que se ejecuta */
+        animation-iteration-count: infinite;
+        /* duracion */
+        animation-duration: 4s;
+        /* tiempo que demora hasta que carga */
+        animation-delay: 1s;
     }
 
-    100% {
-        color: gray;
+    @keyframes efecto {
+        0% {
+            color: rgb(150, 32, 150);
+        }
+
+        50% {
+            color: rgb(197, 148, 197);
+        }
+
+        75% {
+            color: black;
+        }
+
+        100% {
+            color: gray;
+        }
+
     }
 
+    .portadaText p {
+        text-align: center;
+        background-color: white;
+        background-image: linear-gradient(white, grey);
+        font-size: medium;
+        height: 500px;
+        
+    }
 }
-
-main .portadaText p {
-    text-align: center;
-    background-color: white;
-    background-image: linear-gradient(white, grey);
-    font-size: medium;
-    padding-top: 30px;
-    padding-bottom: 150px;
-    height: 0%;
-
-}
-
 /* fin de portada */
+/* inicio productos */
+.prendas{
+    display: flex;
+}
+/* fin productos */
+
+
 /* inicio footer */
 
 footer {
@@ -114,7 +120,7 @@ footer {
     bottom: 0;
     width: 100%;
     height: 0.5s;
-}
+
 
 .bi-whatsapp:before {
     font-size: 200%;
@@ -163,6 +169,7 @@ footer {
 .footer__creditos {
     font-size: 0.8rem;
     text-align: center;
+}
 }
 
 /* fin footer */
@@ -242,7 +249,12 @@ footer {
     margin: 0 0 0 20px;
     padding: 20px;
 }
-
+/* main contacto */
+.main_contacto{
+    height: 100%;
+    width: 300px;
+}
+/* fin main contacto */
 /* inicio vista mobile index-nosotros*/
 @media only screen and (max-width: 350px) {
     body {
@@ -361,13 +373,20 @@ footer {
     /* fin footer */
 
 }
+
 /* inicio vista mobile index/nosotros */
 @media only screen and (max-width:420px) {
+
     /* inicio index */
     body {
         background-color: white;
-        height: 1000px; }
-        .carousel-inner {height: 300px;}
+        height: 1000px;
+    }
+
+    .carousel-inner {
+        height: 300px;
+    }
+
     main .portadaText p {
         text-align: center;
         background-color: white;
@@ -376,25 +395,28 @@ footer {
         padding-top: 70px;
         height: 0%;
     }
+
     /* fin index */
     /* inicio @media nosotros */
-    .gridPadre{
+    .gridPadre {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 120px;
-        grid-template-areas: 
-        "titulo"
-        "imagen"
-        "texto";
+        grid-template-areas:
+            "titulo"
+            "imagen"
+            "texto";
         justify-items: center;
     }
+
     h2 {
         grid-area: titulo;
         text-align: center;
         padding-bottom: 100px;
         height: 1px;
     }
-    .text_nosotros{
+
+    .text_nosotros {
         grid-area: texto;
         margin: 1cm;
         height: 1cm;
@@ -402,11 +424,13 @@ footer {
         padding-top: 10px;
         text-align: center;
     }
+
     .gridPadre img {
         grid-area: imagen;
         width: 350px;
         padding-bottom: 1px;
     }
+
     /* fin @media nosotros */
     /* inicio @media footer */
     footer {
@@ -467,8 +491,9 @@ footer {
         font-size: 0.8rem;
         text-align: center;
     }
+
     /* fin @media footer */
-    
+
 }
 
 /* fin vista mobile index/nosotros*/
