@@ -1,0 +1,29 @@
+/* main contacto */
+.mb-3 {
+    
+    margin: 1rem;
+    margin-bottom: 1rem!important;
+}
+textarea.form-control {
+    height: 8rem;
+    width: 25rem;
+   
+}
+.form-control {
+    display: block;
+    width: 50%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-secundary;
+    background-clip: padding-box;
+    border: 2px solid
+    }
+    .btn{
+        background-color: $color-secundary;
+        padding-bottom: 1px;
+        margin: 5px;
+        
+    }
+/* fin main contacto */

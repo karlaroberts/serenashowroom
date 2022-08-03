@@ -1,137 +1,42 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none; }
+/* main contacto */
+.mb-3 {
+  margin: 1rem;
+  margin-bottom: 1rem !important; }
 
-body {
-  background-color: white; }
+textarea.form-control {
+  height: 8rem;
+  width: 25rem; }
 
-/* inicio header */
-header {
-  background-color: #ffdfe4;
-  background-image: linear-gradient(#c594c5, white); }
-  header .logo__flex {
-    font-size: 70px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start; }
-  header h1 {
-    font-family: 'Times New Roman', Times, serif;
-    color: #696868;
-    text-align: center; }
-  header img {
-    width: 100px;
-    height: 70px;
-    margin: 0 20px 0 20px; }
-  header .carrito {
-    font-size: 200%; }
+.form-control {
+  display: block;
+  width: 50%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #c594c5;
+  background-clip: padding-box;
+  border: 2px solid; }
 
-/* fin header */
-/* inicio portada */
-main .carousel-inner {
-  height: 400px; }
+.btn {
+  background-color: #c594c5;
+  padding-bottom: 1px;
+  margin: 5px; }
 
-main .contenedor__flex {
-  height: 200px;
-  width: 70px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center; }
-
-main .titulo_portada {
-  color: grey;
-  font-size: 30px;
-  text-align: center;
-  /* nombre */
-  animation-name: efecto;
-  /* veces que se ejecuta */
-  animation-iteration-count: infinite;
-  /* duracion */
-  animation-duration: 4s;
-  /* tiempo que demora hasta que carga */
-  animation-delay: 1s; }
-
-@keyframes efecto {
-  0% {
-    color: #962096; }
-  50% {
-    color: #c594c5; }
-  75% {
-    color: black; }
-  100% {
-    color: gray; } }
-
-main .portadaText p {
-  text-align: center;
-  background-color: white;
-  background-image: linear-gradient(white, grey);
-  font-size: medium;
-  height: 500px; }
-
-/* fin de portada */
-/* inicio productos */
-.prendas {
-  display: flex; }
-
-/* fin productos */
-/* inicio footer */
-footer {
-  color: #0f0f0f;
-  background-color: grey;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 0.5s; }
-  footer .bi-whatsapp:before {
-    font-size: 200%; }
-  footer .bi-envelope:before {
-    font-size: 200%; }
-  footer .bi-geo-alt:before {
-    font-size: 200%; }
-  footer .fa-cc-visa:before {
-    font-size: 200%;
-    color: black; }
-  footer .fa-cc-mastercard::before {
-    font-size: 200%;
-    color: black; }
-  footer .fa-cc-amex:before {
-    font-size: 200%;
-    color: black; }
-  footer .fa-cc-paypal:before {
-    font-size: 200%;
-    color: black; }
-  footer .footer__flex {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.8rem; }
-  footer .redes {
-    font-size: 200%;
-    align-items: center; }
-  footer .footer__creditos {
-    font-size: 0.8rem;
-    text-align: center; }
-
-/* fin footer */
+/* fin main contacto */
 /* inicio main nosotros */
 .gridPadre {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px auto;
+  grid-template-rows: 100px 400px;
   grid-template-areas: "titulo  titulo" "texto   imagen";
   justify-items: left; }
 
-.tit {
-  text-align: left;
-  padding: 1cm;
-  margin: 1cm; }
+.animacion_titulos {
+  grid-area: titulo; }
+  .animacion_titulos .tit {
+    text-align: left;
+    padding: 1rem; }
 
 .text_nosotros {
   grid-area: texto;
@@ -146,10 +51,119 @@ footer {
   padding-bottom: 400px; }
 
 /* fin main nosotros */
-/* animacion de titulos */
-.animacion_titulos {
+/* inicio @media nosotros */
+@media only screen and (max-width: 420px) {
+  .gridPadre {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px;
+    grid-template-areas: "titulo" "imagen" "texto";
+    justify-items: center; }
+  h2 {
+    grid-area: titulo;
+    text-align: center;
+    padding-bottom: 100px;
+    height: 1px; }
+  .text_nosotros {
+    grid-area: texto;
+    margin: 1cm;
+    height: 1cm;
+    padding-bottom: 600px;
+    padding-top: 10px;
+    text-align: center; }
+  .gridPadre img {
+    grid-area: imagen;
+    width: 350px;
+    padding-bottom: 1px; } }
+
+/* fin @media nosotros */
+/* inicio preguntas frecuentes */
+.preguntas {
+  margin: 2rem; }
+
+h5 {
+  color: #c594c5; }
+
+.tabla_talles img {
+  height: 300px;
+  width: 600px;
+  border: 20px;
+  margin: 0 0 0 20px;
+  padding: 20px; }
+
+/* fin preguntas frecuentes */
+/* inicio productos */
+h3 {
+  border: 20px;
+  margin: 20px; }
+
+.prendas {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: 3rem; }
+  .prendas .card {
+    height: 25rem;
+    border: 1px solid grey; }
+    .prendas .card img {
+      height: 65%; }
+    .prendas .card .card-body {
+      height: 30%;
+      padding: 0%; }
+
+/* fin productos */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+body {
+  background-color: white; }
+
+/* inicio header */
+header {
+  background-color: white; }
+  header .logo__flex {
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center; }
+  header h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    backface-visibility: visible;
+    font-size: 70px;
+    color: #c594c5;
+    border: solid;
+    text-align: center; }
+  header img {
+    height: 70px;
+    width: 100px;
+    margin: 0 20px 0 20px; }
+  header .carrito {
+    font-size: 200%; }
+
+/* fin header */
+/* inicio portada */
+main .carousel-inner {
+  height: 400px; }
+
+main .contenedor__flex {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center; }
+
+main .titulo_portada {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: grey;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   /* nombre */
   animation-name: efecto;
@@ -170,21 +184,70 @@ footer {
   100% {
     color: gray; } }
 
+main main .portadaText p {
+  text-align: center;
+  background-color: white;
+  background-image: linear-gradient(white, grey);
+  font-size: medium;
+  padding-bottom: 20px;
+  padding-top: 100px;
+  height: 20%; }
+
+/* fin de portada */
+/* inicio footer */
+footer {
+  color: #0f0f0f;
+  line-height: 15px;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  bottom: 0;
+  width: 100%; }
+  footer ul li {
+    font-size: 200%; }
+    footer ul li a {
+      color: black; }
+
+.footer__flex {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem; }
+
+.iconos {
+  font-size: 200%; }
+
+.redes {
+  font-size: 200%;
+  align-items: center; }
+
+.footer__creditos {
+  font-size: 0.8rem;
+  text-align: center; }
+
+/* fin footer */
+/* animacion de titulos */
+.animacion_titulos {
+  color: grey;
+  font-size: 30px;
+  text-align: center;
+  animation-name: efecto;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 1s; }
+
+@keyframes efecto {
+  0% {
+    color: #962096; }
+  50% {
+    color: #c594c5; }
+  75% {
+    color: black; }
+  100% {
+    color: gray; } }
+
 /* fin animacion de titulos */
-.tabla_talles img {
-  width: 600px;
-  height: 300px;
-  border: 20px;
-  margin: 0 0 0 20px;
-  padding: 20px; }
-
-/* main contacto */
-.main_contacto {
-  height: 100%;
-  width: 300px; }
-
-/* fin main contacto */
-/* inicio vista mobile index-nosotros*/
+/* inicio vista mobile index*/
 @media only screen and (max-width: 350px) {
   body {
     background-color: white;
@@ -257,7 +320,7 @@ footer {
     text-align: center; }
   /* fin footer */ }
 
-/* inicio vista mobile index/nosotros */
+/* inicio vista mobile index*/
 @media only screen and (max-width: 420px) {
   /* inicio index */
   body {
@@ -273,30 +336,6 @@ footer {
     padding-top: 70px;
     height: 0%; }
   /* fin index */
-  /* inicio @media nosotros */
-  .gridPadre {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px;
-    grid-template-areas: "titulo" "imagen" "texto";
-    justify-items: center; }
-  h2 {
-    grid-area: titulo;
-    text-align: center;
-    padding-bottom: 100px;
-    height: 1px; }
-  .text_nosotros {
-    grid-area: texto;
-    margin: 1cm;
-    height: 1cm;
-    padding-bottom: 600px;
-    padding-top: 10px;
-    text-align: center; }
-  .gridPadre img {
-    grid-area: imagen;
-    width: 350px;
-    padding-bottom: 1px; }
-  /* fin @media nosotros */
   /* inicio @media footer */
   footer {
     color: #0f0f0f;
@@ -336,4 +375,4 @@ footer {
     text-align: center; }
   /* fin @media footer */ }
 
-/* fin vista mobile index/nosotros*/
+/* fin vista mobile index*/

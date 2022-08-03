@@ -1,0 +1,16 @@
+/* inicio preguntas frecuentes */
+.preguntas{
+    margin: 2rem;
+    
+}
+h5 {color: $color-secundary;
+
+}
+.tabla_talles img {
+    @include altoAncho(300px,600px);
+    border: 20px;
+    margin: 0 0 0 20px;
+    padding: 20px;
+}
+
+/* fin preguntas frecuentes */

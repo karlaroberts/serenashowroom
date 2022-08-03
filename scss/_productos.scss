@@ -1,0 +1,20 @@
+/* inicio productos */
+h3{
+    border: 20px;
+    margin: 20px;
+}
+.prendas{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content:space-around;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    .card{height: 25rem;
+        border: 1px solid grey;
+    img{height: 65%};
+    .card-body{height:30%; padding: 0%;}}
+}
+
+
+/* fin productos */
