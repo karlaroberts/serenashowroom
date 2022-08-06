@@ -1,9 +1,11 @@
 /* inicio preguntas frecuentes */
+@import "mixsins";
+
 .preguntas{
     margin: 2rem;
     
 }
-h5 {color: $color-secundary;
+h5 { color: map-get($map:$palette, $key:"secondary" );
 
 }
 .tabla_talles img {
