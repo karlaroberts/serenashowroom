@@ -10,7 +10,7 @@ h5 { color: map-get($map:$palette, $key:"secondary" );
 
 }
 .tabla_talles img {
-    @include altoAncho(300px,600px);
+    @include altoAncho(300px,400px);
     border: 20px;
     margin: 0 0 0 20px;
     padding: 20px;

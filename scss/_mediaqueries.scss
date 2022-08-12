@@ -1,13 +1,13 @@
 /* inicio vista mobile index*/
 @media only screen and (max-width: 420px) {
     body {
-        
+
         background-color: white;
         height: auto;
-        width: fit-content;
+        width: auto;
 
         header .logo__flex {
-           
+
             font-size: 10px;
             display: flex;
             flex-direction: row;
@@ -16,9 +16,12 @@
             justify-content: flex-start;
             align-items: center;
             border: solid rgb(197, 148, 197);
+
             a {
                 display: none;
-            };
+            }
+
+            ;
         }
 
         h1 {
@@ -28,10 +31,13 @@
             color: map-get($map:$palette, $key:"secondary");
             text-align: center;
         }
-        .portada{
+
+        .portada {
             height: 250px;
+
             .carousel {
                 height: 100%;
+
                 .carousel-inner {
                     height: 100%;
                     width: 100%;
@@ -39,9 +45,12 @@
             }
 
         }
-        .contenedor__flex{
-            .portadaText{
-                p{padding: 0;}
+
+        .contenedor__flex {
+            .portadaText {
+                p {
+                    padding: 0;
+                }
             }
         }
 
@@ -141,6 +150,7 @@
                     }
                 }
             }
+
             .bi-whatsapp:before {
                 font-size: 100%;
             }
@@ -196,9 +206,9 @@
         }
 
 
-        /* media productos */
+        /* inicio media productos */
 
-         .contenedorPrendas {
+        .contenedorPrendas {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -217,33 +227,48 @@
                 }
             }
         }
+
+        /* inicio media de preguntas frecuentes */
+        .contenedorPreguntas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .tabla_talles img {
+                height: 200px;
+                width: 300px;
+                border: 20px;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        /* fin de media preguntas frecuentes */
+        /* inicio media de nosotros */
+        .gridPadre {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+
+            p {
+                width: 100%;
+            }
+
+            ;
+
+            img {
+                width: 100%;
+                padding-bottom: 50px;
+            }
+        }
+
+        h2 {
+            text-align: center;
+        }
+
     }
-/* media de preguntas frecuentes */
-.contenedorPreguntas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    /* fin media de nosotros */
 }
-/* media de nosotros */
-.gridPadre {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    p{width: 100%;};
-    img{
-        width: 100%;
-    padding-bottom: 50px;
-    }
-}
-
-h2 {
-    text-align: center;   
-}
-
-}
-
-
-
-

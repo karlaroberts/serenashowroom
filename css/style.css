@@ -89,8 +89,10 @@ textarea.form-control {
     display: flex;
     flex-direction: column;
   }
-  .local {
-    width: 100%;
+  .local iframe {
+    border: 0;
+    width: 300px;
+    height: 300px;
   }
 }
 /* inicio main nosotros */
@@ -134,7 +136,7 @@ h5 {
 
 .tabla_talles img {
   height: 300px;
-  width: 600px;
+  width: 400px;
   border: 20px;
   margin: 0 0 0 20px;
   padding: 20px;
@@ -180,9 +182,12 @@ h3 {
   body {
     background-color: white;
     height: auto;
-    width: fit-content;
+    width: auto;
     /* inicio footer */
-    /* media productos */
+    /* inicio media productos */
+    /* inicio media de preguntas frecuentes */
+    /* fin de media preguntas frecuentes */
+    /* inicio media de nosotros */
   }
   body header .logo__flex {
     font-size: 10px;
@@ -348,30 +353,36 @@ h3 {
   body .contenedorPrendas .prendas .card {
     margin-bottom: 10px;
   }
-  /* media de preguntas frecuentes */
-  .contenedorPreguntas {
+  body .contenedorPreguntas {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  /* media de nosotros */
-  .gridPadre {
+  body .contenedorPreguntas .tabla_talles img {
+    height: 200px;
+    width: 300px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  body .gridPadre {
     height: auto;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
   }
-  .gridPadre p {
+  body .gridPadre p {
     width: 100%;
   }
-  .gridPadre img {
+  body .gridPadre img {
     width: 100%;
     padding-bottom: 50px;
   }
-  h2 {
+  body h2 {
     text-align: center;
   }
+  /* fin media de nosotros */
 }
 * {
   padding: 0;
