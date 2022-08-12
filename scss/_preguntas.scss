@@ -1,7 +1,8 @@
 /* inicio preguntas frecuentes */
 @import "mixsins";
 
-.preguntas{
+.preguntas{display: flex;
+    flex-direction: column;
     margin: 2rem;
     
 }

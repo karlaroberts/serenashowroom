@@ -1,7 +1,26 @@
 /* main contacto */
+section {
+  margin-bottom: 30px;
+}
+
+.contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.local {
+  text-align: center;
+}
+
 .mb-3 {
   margin: 1rem;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
 }
 
 textarea.form-control {
@@ -11,7 +30,7 @@ textarea.form-control {
 
 .form-control {
   display: block;
-  width: 50%;
+  width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -28,72 +47,84 @@ textarea.form-control {
 }
 
 /* fin main contacto */
+/* media de contactos */
+@media only screen and (max-width: 420px) {
+  .logo__flex {
+    font-size: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid rgb(197, 148, 197);
+  }
+  h1 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    backface-visibility: visible;
+    font-size: 25px;
+    color: rgb(197, 148, 197);
+    text-align: center;
+  }
+  .mb-3 {
+    margin: 1rem;
+    margin-bottom: 1rem !important;
+  }
+  textarea.form-control {
+    height: 4rem;
+    width: 15rem;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 250;
+    line-height: 1.5;
+    color: rgb(197, 148, 197);
+    background-clip: padding-box;
+    border: 2px solid;
+  }
+  .contacto {
+    display: flex;
+    flex-direction: column;
+  }
+  .local {
+    width: 100%;
+  }
+}
 /* inicio main nosotros */
 .gridPadre {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100px 400px;
-  grid-template-areas: "titulo  titulo" "texto   imagen";
-  justify-items: left;
+  display: flex;
+  height: 500px;
+  flex-direction: row;
+}
+.gridPadre p {
+  padding: 10px;
+  width: 40%;
+  font-size: 20px;
+}
+.gridPadre img {
+  height: 70%;
+  width: 50%;
+  padding: 10px;
 }
 
 .animacion_titulos {
-  grid-area: titulo;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 .animacion_titulos .tit {
   text-align: left;
-  padding: 1rem;
 }
 
-.text_nosotros {
-  grid-area: texto;
-  margin: 1cm;
-  height: 1cm;
-  padding-bottom: 400px;
-  padding-top: 20px;
-}
-
-.gridPadre img {
-  grid-area: imagen;
-  width: 400px;
-  padding-bottom: 400px;
-}
-
-/* fin main nosotros */
-/* inicio @media nosotros */
-@media only screen and (max-width: 420px) {
-  .gridPadre {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px;
-    grid-template-areas: "titulo" "imagen" "texto";
-    justify-items: center;
-  }
-  h2 {
-    grid-area: titulo;
-    text-align: center;
-    padding-bottom: 100px;
-    height: 1px;
-  }
-  .text_nosotros {
-    grid-area: texto;
-    margin: 1cm;
-    height: 1cm;
-    padding-bottom: 600px;
-    padding-top: 10px;
-    text-align: center;
-  }
-  .gridPadre img {
-    grid-area: imagen;
-    width: 350px;
-    padding-bottom: 1px;
-  }
-}
-/* fin @media nosotros */
 /* inicio preguntas frecuentes */
 /* mixin portada index */
 /* fin mixin portada index */
 .preguntas {
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
 }
 
@@ -111,37 +142,240 @@ h5 {
 
 /* fin preguntas frecuentes */
 /* inicio productos */
+.contenedorPrendas {
+  display: flex;
+  flex-direction: column;
+}
+.contenedorPrendas .prendas {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 10px;
+  flex-direction: row;
+}
+.contenedorPrendas .prendas .card {
+  height: 25rem;
+  border: 1px solid grey;
+}
+.contenedorPrendas .prendas .card img {
+  height: 65%;
+}
+.contenedorPrendas .prendas .card-body {
+  height: 30%;
+  padding: 0%;
+}
+
 h3 {
   border: 20px;
   margin: 20px;
 }
 
-.prendas {
-  display: flex;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding-bottom: 3rem;
-}
-.prendas .card {
-  height: 25rem;
-  border: 1px solid grey;
-}
-.prendas .card img {
-  height: 65%;
-}
-.prendas .card .card-body {
-  height: 30%;
-  padding: 0%;
-}
-
 /* fin productos */
 /* mixin portada index */
 /* fin mixin portada index */
+/* inicio vista mobile index*/
+@media only screen and (max-width: 420px) {
+  body {
+    background-color: white;
+    height: auto;
+    width: fit-content;
+    /* inicio footer */
+    /* media productos */
+  }
+  body header .logo__flex {
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid rgb(197, 148, 197);
+  }
+  body header .logo__flex a {
+    display: none;
+  }
+  body h1 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    backface-visibility: visible;
+    font-size: 15px;
+    color: rgb(197, 148, 197);
+    text-align: center;
+  }
+  body .portada {
+    height: 250px;
+  }
+  body .portada .carousel {
+    height: 100%;
+  }
+  body .portada .carousel .carousel-inner {
+    height: 100%;
+    width: 100%;
+  }
+  body .contenedor__flex .portadaText p {
+    padding: 0;
+  }
+  body .titulo_portada {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+  }
+  @keyframes efecto {
+    0% {
+      color: rgb(150, 32, 150);
+    }
+    50% {
+      color: rgb(197, 148, 197);
+    }
+    75% {
+      color: black;
+    }
+    100% {
+      color: gray;
+    }
+  }
+  body main .portadaText p {
+    text-align: center;
+    background-color: white;
+    font-size: medium;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    height: 0%;
+  }
+  body .animacion_titulos {
+    color: grey;
+    font-size: 20px;
+    text-align: left;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+  }
+  body footer .footer__creditos {
+    display: none;
+  }
+  body footer .footer__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: rgb(15, 15, 15);
+    align-items: center;
+    background-color: grey;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+  }
+  body footer .footer__flex .icono p {
+    font-size: 18px;
+    margin: 0;
+  }
+  body footer .footer__flex .pago ul {
+    padding-left: 0px;
+  }
+  body footer .footer__flex .pago ul li p {
+    font-size: x-large;
+  }
+  body footer .footer__flex .redes a {
+    font-size: x-large;
+    padding: 3px;
+  }
+  body footer .bi-whatsapp:before {
+    font-size: 100%;
+  }
+  body footer .bi-envelope:before {
+    font-size: 100%;
+  }
+  body footer .bi-geo-alt:before {
+    font-size: 100%;
+  }
+  body footer .fa-cc-visa:before {
+    font-size: 100%;
+    color: black;
+  }
+  body footer .fa-cc-mastercard::before {
+    font-size: 100%;
+    color: black;
+  }
+  body footer .fa-cc-amex:before {
+    font-size: 100%;
+    color: black;
+  }
+  body footer .fa-cc-paypal:before {
+    font-size: 100%;
+    color: black;
+  }
+  body footer .footer__flex {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.3rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  body footer .redes {
+    font-size: 100%;
+    align-items: center;
+  }
+  body footer .footer__creditos {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  body .contenedorPrendas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .contenedorPrendas .prendas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  body .contenedorPrendas .prendas .card {
+    margin-bottom: 10px;
+  }
+  /* media de preguntas frecuentes */
+  .contenedorPreguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* media de nosotros */
+  .gridPadre {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+  .gridPadre p {
+    width: 100%;
+  }
+  .gridPadre img {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  h2 {
+    text-align: center;
+  }
+}
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -178,11 +412,17 @@ header img {
 header .carrito {
   font-size: 200%;
 }
+header .carrito a {
+  color: black;
+}
 
 /* fin header */
 /* inicio portada index */
-main .carousel-inner {
-  height: 400px;
+main .carousel {
+  padding-bottom: 20px;
+}
+main .carousel .carousel-inner {
+  height: 500px;
 }
 main .contenedor__flex {
   display: flex;
@@ -202,27 +442,12 @@ main .titulo_portada {
   animation-duration: 4s;
   animation-delay: 1s;
 }
-@keyframes efecto {
-  0% {
-    color: rgb(150, 32, 150);
-  }
-  50% {
-    color: rgb(197, 148, 197);
-  }
-  75% {
-    color: black;
-  }
-  100% {
-    color: gray;
-  }
-}
-main main .portadaText p {
+
+main .portadaText p {
   text-align: center;
   background-color: white;
-  background-image: linear-gradient(white, grey);
   font-size: medium;
   padding-bottom: 20px;
-  padding-top: 100px;
   height: 20%;
 }
 
@@ -256,9 +481,8 @@ main main .portadaText p {
 /* inicio footer */
 footer {
   color: rgb(15, 15, 15);
-  line-height: 15px;
+  line-height: 30px;
   background-color: grey;
-  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   bottom: 0;
@@ -266,6 +490,7 @@ footer {
 }
 footer ul li {
   font-size: 200%;
+  text-align: center;
 }
 footer ul li a {
   color: black;
@@ -276,134 +501,32 @@ footer ul li a {
   justify-content: space-around;
   font-size: 0.8rem;
 }
-
-.iconos {
-  font-size: 200%;
+.footer__flex .icono p {
+  font-size: 18px;
 }
 
 .redes {
-  font-size: 200%;
+  font-size: 2rem;
   align-items: center;
+}
+.redes a {
+  color: black;
+}
+
+.pago mt-4 {
+  margin-top: 0;
+}
+.pago ul {
+  padding-left: 0;
+}
+.pago ul li p {
+  font-size: 2rem;
 }
 
 .footer__creditos {
-  font-size: 0.8rem;
   text-align: center;
 }
 
 /* fin footer */
-/* inicio vista mobile index*/
-@media only screen and (max-width: 420px) {
-  body {
-    background-color: white;
-    height: 1000px;
-  }
-  .logo__flex {
-    font-size: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: center;
-    border: solid rgb(197, 148, 197);
-  }
-  h1 {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    backface-visibility: visible;
-    font-size: 15px;
-    color: rgb(197, 148, 197);
-    text-align: center;
-  }
-  .carousel-inner {
-    height: 300px;
-    width: 500px;
-  }
-  .titulo_portada {
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    color: grey;
-    font-size: 20px;
-    text-align: center;
-    animation-name: efecto;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-    animation-delay: 1s;
-  }
-  @keyframes efecto {
-    0% {
-      color: rgb(150, 32, 150);
-    }
-    50% {
-      color: rgb(197, 148, 197);
-    }
-    75% {
-      color: black;
-    }
-    100% {
-      color: gray;
-    }
-  }
-  main .portadaText p {
-    text-align: center;
-    background-color: white;
-    background-image: linear-gradient(white, grey);
-    font-size: medium;
-    padding-top: 70px;
-    padding-bottom: 50px;
-    height: 0%;
-  }
-  /* inicio footer */
-  footer {
-    color: rgb(15, 15, 15);
-    font-size: 2px;
-    background-color: grey;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    width: 100%;
-    height: 20%;
-  }
-  .bi-whatsapp:before {
-    font-size: 100%;
-  }
-  .bi-envelope:before {
-    font-size: 100%;
-  }
-  .bi-geo-alt:before {
-    font-size: 100%;
-  }
-  .fa-cc-visa:before {
-    font-size: 100%;
-    color: black;
-  }
-  .fa-cc-mastercard::before {
-    font-size: 100%;
-    color: black;
-  }
-  .fa-cc-amex:before {
-    font-size: 100%;
-    color: black;
-  }
-  .fa-cc-paypal:before {
-    font-size: 100%;
-    color: black;
-  }
-  .footer__flex {
-    display: flex;
-    justify-content: space-around;
-    font-size: 0.3rem;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .redes {
-    font-size: 100%;
-    align-items: center;
-  }
-  .footer__creditos {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */

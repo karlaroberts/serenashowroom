@@ -1,0 +1,249 @@
+/* inicio vista mobile index*/
+@media only screen and (max-width: 420px) {
+    body {
+        
+        background-color: white;
+        height: auto;
+        width: fit-content;
+
+        header .logo__flex {
+           
+            font-size: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: flex-start;
+            justify-content: flex-start;
+            align-items: center;
+            border: solid rgb(197, 148, 197);
+            a {
+                display: none;
+            };
+        }
+
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            backface-visibility: visible;
+            font-size: 15px;
+            color: map-get($map:$palette, $key:"secondary");
+            text-align: center;
+        }
+        .portada{
+            height: 250px;
+            .carousel {
+                height: 100%;
+                .carousel-inner {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+        }
+        .contenedor__flex{
+            .portadaText{
+                p{padding: 0;}
+            }
+        }
+
+        .titulo_portada {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: grey;
+            font-size: 20px;
+            text-align: center;
+            animation-name: efecto;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            animation-delay: 1s;
+        }
+
+        @keyframes efecto {
+            0% {
+                color: rgb(150, 32, 150);
+            }
+
+            50% {
+                color: rgb(197, 148, 197);
+            }
+
+            75% {
+                color: black;
+            }
+
+            100% {
+                color: gray;
+            }
+
+        }
+
+        main .portadaText p {
+            text-align: center;
+            background-color: white;
+            font-size: medium;
+            padding-top: 70px;
+            padding-bottom: 50px;
+            height: 0%;
+
+        }
+
+        .animacion_titulos {
+            color: grey;
+            font-size: 20px;
+            text-align: left;
+            animation-name: efecto;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            animation-delay: 1s;
+        }
+
+        /* inicio footer */
+
+        footer {
+            display: flex;
+            flex-direction: column;
+
+            .footer__creditos {
+                display: none
+            }
+
+            .footer__flex {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                color: rgb(15, 15, 15);
+                align-items: center;
+                background-color: grey;
+                background-size: cover;
+                width: 100%;
+                height: 80%;
+
+                .icono p {
+                    font-size: 18px;
+                    margin: 0;
+                }
+
+
+                .pago {
+                    ul {
+                        padding-left: 0px;
+
+                        li {
+                            p {
+                                font-size: x-large;
+                            }
+                        }
+                    }
+                }
+
+                .redes {
+                    a {
+                        font-size: x-large;
+                        padding: 3px;
+                    }
+                }
+            }
+            .bi-whatsapp:before {
+                font-size: 100%;
+            }
+
+            .bi-envelope:before {
+                font-size: 100%;
+            }
+
+            .bi-geo-alt:before {
+                font-size: 100%;
+            }
+
+            .fa-cc-visa:before {
+                font-size: 100%;
+                color: black;
+            }
+
+            .fa-cc-mastercard::before {
+                font-size: 100%;
+                color: black;
+            }
+
+            .fa-cc-amex:before {
+                font-size: 100%;
+                color: black;
+            }
+
+            .fa-cc-paypal:before {
+                font-size: 100%;
+                color: black;
+            }
+
+            .footer__flex {
+                display: flex;
+                justify-content: space-around;
+                font-size: 0.3rem;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: stretch;
+
+
+            }
+
+            .redes {
+                font-size: 100%;
+                align-items: center;
+            }
+
+            .footer__creditos {
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+
+
+        /* media productos */
+
+         .contenedorPrendas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .prendas {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: space-around;
+                align-items: center;
+                padding-bottom: 0;
+
+                .card {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+/* media de preguntas frecuentes */
+.contenedorPreguntas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* media de nosotros */
+.gridPadre {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    p{width: 100%;};
+    img{
+        width: 100%;
+    padding-bottom: 50px;
+    }
+}
+
+h2 {
+    text-align: center;   
+}
+
+}
+
+
+
+
